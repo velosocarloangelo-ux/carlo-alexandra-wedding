@@ -84,7 +84,7 @@
     @keyframes pulseRing {
       0% { transform: scale(0.95); opacity: 0.7; }
       70% { transform: scale(1.3); opacity: 0; }
-      100% { transform: scale(1.3); opacity: 0; }
+      100% { scale: 1.3; opacity: 0; }
     }
 
     .chibi-groom {
@@ -122,10 +122,8 @@
   <!-- Subtle Floating Peach, Pink & Lavender Petals -->
   <div id="petal-container" aria-hidden="true"></div>
 
-  <!-- Hidden YouTube Audio Container (No visible video) -->
-  <div id="yt-audio-wrapper" style="position:fixed;width:1px;height:1px;opacity:0.001;pointer-events:none;overflow:hidden;bottom:0;left:0;" aria-hidden="true">
-    <div id="yt-player"></div>
-  </div>
+  <!-- Ad-Free Direct MP3 Audio Player -->
+  <audio id="wedding-audio" src="music.mp3" loop preload="auto"></audio>
 
   <!-- Floating Audio-Only Music Controller -->
   <div class="fixed bottom-5 right-5 z-50 flex items-center gap-2">
@@ -650,7 +648,7 @@
     <p>December 12, 2026 • Ado’s Panciteria, Librado Hall, Malinao, Pasig City</p>
   </footer>
 
-  <!-- Scripts: Countdown, Falling Petals & Audio-Only YouTube Music -->
+  <!-- Scripts: Countdown, Falling Petals & Ad-Free MP3 Audio Player -->
   <script>
     // 1. Live Wedding Countdown (Dec 12, 2026 11:00 AM PHT)
     const weddingDate = new Date("December 12, 2026 11:00:00 GMT+0800").getTime();
@@ -693,44 +691,12 @@
       }
     })();
 
-    // 3. YouTube IFrame API (Audio-Only Background Music: eAc6TjMW-FQ)
-    var ytPlayer;
-    var isMusicPlaying = false;
-    var userInteracted = false;
+    // 3. Ad-Free Direct MP3 Audio Player (Works on iPhone & Android)
+    const weddingAudio = document.getElementById("wedding-audio");
+    let isMusicPlaying = false;
+    let hasInteracted = false;
 
-    var tag = document.createElement('script');
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-    function onYouTubeIframeAPIReady() {
-      ytPlayer = new YT.Player('yt-player', {
-        height: '1',
-        width: '1',
-        videoId: 'eAc6TjMW-FQ',
-        playerVars: {
-          autoplay: 1,
-          loop: 1,
-          playlist: 'eAc6TjMW-FQ',
-          controls: 0,
-          modestbranding: 1,
-          playsinline: 1
-        },
-        events: {
-          onReady: function(event) {
-            event.target.setVolume(65);
-            event.target.playVideo();
-          },
-          onStateChange: function(event) {
-            if (event.data === YT.PlayerState.PLAYING) {
-              setMusicUI(true);
-            } else if (event.data === YT.PlayerState.PAUSED || event.data === YT.PlayerState.ENDED) {
-              setMusicUI(false);
-            }
-          }
-        }
-      });
-    }
+    weddingAudio.volume = 0.65;
 
     function setMusicUI(playing) {
       isMusicPlaying = playing;
@@ -749,22 +715,28 @@
     }
 
     function toggleWeddingMusic() {
-      if (!ytPlayer || typeof ytPlayer.playVideo !== "function") return;
       if (isMusicPlaying) {
-        ytPlayer.pauseVideo();
+        weddingAudio.pause();
+        setMusicUI(false);
       } else {
-        ytPlayer.playVideo();
+        weddingAudio.play().then(() => setMusicUI(true)).catch(() => setMusicUI(false));
       }
     }
 
-    // Start music automatically on guest's first tap/click if browser blocks autoplay
-    document.addEventListener("click", function autoStartOnFirstTap(e) {
-      if (userInteracted) return;
-      userInteracted = true;
-      if (!e.target.closest("#music-toggle-btn") && ytPlayer && typeof ytPlayer.playVideo === "function" && !isMusicPlaying) {
-        ytPlayer.playVideo();
-      }
-    }, { once: true });
+    // Attempt autoplay on desktop/Android; on iPhone, start cleanly on first tap/touch
+    window.addEventListener("load", () => {
+      weddingAudio.play().then(() => setMusicUI(true)).catch(() => setMusicUI(false));
+    });
+
+    ["click", "touchstart"].forEach(evt => {
+      document.addEventListener(evt, function unlockAudio(e) {
+        if (hasInteracted) return;
+        hasInteracted = true;
+        if (!e.target.closest("#music-toggle-btn") && !isMusicPlaying) {
+          weddingAudio.play().then(() => setMusicUI(true)).catch(() => {});
+        }
+      }, { once: true, passive: true });
+    });
   </script>
 </body>
 </html>

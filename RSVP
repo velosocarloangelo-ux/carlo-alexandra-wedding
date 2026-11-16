@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Angelo & Alexandra Dae | Wedding RSVP</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Romantic Script + Elegant Serif + Clean Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome for subtle icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        plum: {
+                            DEFAULT: '#6B214B',
+                            dark: '#4D1535',
+                            light: '#8E3567'
+                        },
+                        gold: {
+                            DEFAULT: '#C5A059',
+                            light: '#DFC38A'
+                        },
+                        blush: '#FADADD',
+                        champagne: '#F9F3EC',
+                        sage: '#BCE2D7',
+                        dustyBlue: '#84C5D3',
+                        terracotta: '#8A4836'
+                    },
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gradient-to-br from-[#FBF4F7] via-[#F9F3EC] to-[#EFE9F4] min-h-screen selection:bg-plum selection:text-white">
+
+    <!-- Sticky Top Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gold/30 shadow-sm">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="font-script text-2xl sm:text-3xl text-plum hover:text-plum-light transition">
+                    C &amp; A
+                </a>
+                <div class="flex items-center space-x-2 sm:space-x-6 text-xs sm:text-sm font-medium text-plum">
+                    <a href="#details" class="px-2 py-1.5 rounded-lg hover:bg-blush/40 transition">Details</a>
+                    <a href="#entourage" class="px-2 py-1.5 rounded-lg hover:bg-blush/40 transition">Sponsors</a>
+                    <a href="#menu" class="px-2 py-1.5 rounded-lg hover:bg-blush/40 transition">Menu</a>
+                    <a href="#rsvp" class="bg-plum text-white px-4 py-2 rounded-full shadow-sm hover:bg-plum-dark transition transform hover:-translate-y-0.5">
+                        RSVP Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12">
+
+        <!-- HERO SECTION (Inspired by CA Wedding Invitation.jpg) -->
+        <section id="home" class="relative bg-white/90 rounded-3xl p-6 sm:p-12 shadow-xl border border-gold/40 overflow-hidden text-center">
+            <!-- Decorative Top-Left & Bottom-Right Watercolor Floral SVGs -->
+            <svg class="absolute top-0 left-0 w-36 sm:w-52 h-36 sm:h-52 opacity-80 pointer-events-none" viewBox="0 0 200 200" fill="none">
+                <circle cx="30" cy="30" r="45" fill="#F8A5A5" fill-opacity="0.35"/>
+                <circle cx="80" cy="20" r="35" fill="#D4C1EC" fill-opacity="0.4"/>
+                <circle cx="20" cy="85" r="30" fill="#BCE2D7" fill-opacity="0.35"/>
+                <path d="M10 10 Q 60 50, 90 15 T 150 25" stroke="#C5A059" stroke-width="1.5" fill="none"/>
+                <path d="M15 40 Q 45 80, 25 130" stroke="#C5A059" stroke-width="1.5" fill="none"/>
+            </svg>
+            <svg class="absolute bottom-0 right-0 w-36 sm:w-52 h-36 sm:h-52 opacity-80 pointer-events-none rotate-180" viewBox="0 0 200 200" fill="none">
+                <circle cx="30" cy="30" r="45" fill="#F8A5A5" fill-opacity="0.35"/>
+                <circle cx="80" cy="20" r="35" fill="#D4C1EC" fill-opacity="0.4"/>
+                <circle cx="20" cy="85" r="30" fill="#BCE2D7" fill-opacity="0.35"/>
+                <path d="M10 10 Q 60 50, 90 15 T 150 25" stroke="#C5A059" stroke-width="1.5" fill="none"/>
+            </svg>
+
+            <!-- Inner Thin Gold Frame -->
+            <div class="relative border-2 border-gold/60 rounded-2xl px-4 py-10 sm:py-14 sm:px-10 bg-gradient-to-b from-white/70 to-champagne/50">
+                <p class="uppercase tracking-[0.25em] text-xs sm:text-sm font-semibold text-plum mb-4">
+                    Save The Date
+                </p>
+
+                <h1 class="font-script text-5xl sm:text-7xl text-plum leading-tight my-2">
+                    Carlo Angelo
+                    <span class="block text-3xl sm:text-5xl my-1 text-gold">&amp;</span>
+                    Alexandra Dae
+                </h1>
+
+                <p class="font-serif italic text-lg sm:text-xl text-plum/90 max-w-md mx-auto mt-6 mb-8">
+                    "We want to share happiness with our loved ones. Come and celebrate our wedding."
+                </p>
+
+                <!-- Date Block matching Invitation 1 -->
+                <div class="max-w-md mx-auto my-6">
+                    <p class="font-serif font-bold tracking-[0.2em] text-plum text-base sm:text-lg mb-2">DECEMBER</p>
+                    <div class="flex items-center justify-center gap-3 sm:gap-6">
+                        <div class="flex-1 border-y border-plum/50 py-1.5 text-xs sm:text-sm font-semibold tracking-widest text-plum">
+                            SATURDAY
+                        </div>
+                        <div class="font-serif font-bold text-5xl sm:text-6xl text-plum leading-none px-2">
+                            12
+                        </div>
+                        <div class="flex-1 border-y border-plum/50 py-1.5 text-xs sm:text-sm font-semibold tracking-widest text-plum">
+                            11:00AM-1:30PM
+                        </div>
+                    </div>
+                    <p class="font-serif font-bold tracking-[0.2em] text-plum text-lg sm:text-xl mt-2">2026</p>
+                </div>
+
+                <!-- Live Countdown Timer -->
+                <div id="countdown" class="grid grid-cols-4 gap-2 sm:gap-4 max-w-sm mx-auto mt-8 pt-6 border-t border-gold/30">
+                    <div class="bg-white/90 rounded-xl p-2 sm:p-3 shadow-sm border border-gold/20">
+                        <span id="days" class="block font-serif font-bold text-xl sm:text-2xl text-plum">--</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Days</span>
+                    </div>
+                    <div class="bg-white/90 rounded-xl p-2 sm:p-3 shadow-sm border border-gold/20">
+                        <span id="hours" class="block font-serif font-bold text-xl sm:text-2xl text-plum">--</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Hours</span>
+                    </div>
+                    <div class="bg-white/90 rounded-xl p-2 sm:p-3 shadow-sm border border-gold/20">
+                        <span id="minutes" class="block font-serif font-bold text-xl sm:text-2xl text-plum">--</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Mins</span>
+                    </div>
+                    <div class="bg-white/90 rounded-xl p-2 sm:p-3 shadow-sm border border-gold/20">
+                        <span id="seconds" class="block font-serif font-bold text-xl sm:text-2xl text-plum">--</span>
+                        <span class="text-[10px] sm:text-xs uppercase tracking-wider text-gray-500">Secs</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+                    <a href="#rsvp" class="bg-plum text-white px-7 py-3 rounded-full font-medium shadow-md hover:bg-plum-dark transition flex items-center gap-2">
+                        <i class="fa-regular fa-envelope-open"></i> Confirm Attendance
+                    </a>
+                    <button onclick="downloadCalendarInvite()" class="bg-white text-plum border border-plum/30 px-5 py-3 rounded-full font-medium hover:bg-blush/30 transition flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-plus"></i> Add to Calendar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEDDING DETAILS SECTION (Inspired by CA Wedding Invitation 2.jpg) -->
+        <section id="details" class="bg-white/90 rounded-3xl p-6 sm:p-10 shadow-lg border border-gold/40">
+            <div class="text-center mb-8">
+                <h2 class="font-script text-4xl sm:text-5xl text-plum">Wedding Details</h2>
+                <div class="w-16 h-0.5 bg-gold mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Reception Card -->
+                <div class="bg-champagne/60 rounded-2xl p-6 border border-gold/30 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-plum/10 text-plum flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h3 class="font-serif font-bold uppercase tracking-widest text-plum text-lg mb-2">Reception</h3>
+                        <p class="font-serif text-lg text-gray-800 leading-relaxed">
+                            <strong>Ado’s Panciteria</strong><br>
+                            Librado Hall,<br>
+                            Malinao, Pasig City
+                        </p>
+                    </div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Ado's+Panciteria+Malinao+Pasig+City" target="_blank" rel="noopener noreferrer" 
+                       class="mt-5 inline-flex items-center justify-center gap-2 text-sm font-semibold text-plum bg-white px-4 py-2.5 rounded-xl border border-plum/20 hover:bg-plum hover:text-white transition">
+                        <i class="fa-solid fa-map-location-dot"></i> Open in Google Maps
+                    </a>
+                </div>
+
+                <!-- Attire & Motif Card -->
+                <div class="bg-champagne/60 rounded-2xl p-6 border border-gold/30 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-plum/10 text-plum flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h3 class="font-serif font-bold uppercase tracking-widest text-plum text-lg mb-2">Attire</h3>
+                        <p class="font-serif text-base sm:text-lg text-gray-800 leading-relaxed mb-4">
+                            We encourage our guests to wear <strong>semi-formal attire</strong> with these colors on our special day:
+                        </p>
+                    </div>
+                    <!-- Color Swatches extracted from Invitation 2 -->
+                    <div class="pt-2">
+                        <div class="flex items-center justify-center -space-x-2 mb-2">
+                            <span class="w-11 h-11 rounded-full border-2 border-white shadow-sm bg-[#84C5D3]" title="Dusty Aqua"></span>
+                            <span class="w-11 h-11 rounded-full border-2 border-white shadow-sm bg-[#BCE2D7]" title="Soft Mint"></span>
+                            <span class="w-11 h-11 rounded-full border-2 border-white shadow-sm bg-[#F9EAD9]" title="Warm Champagne"></span>
+                            <span class="w-11 h-11 rounded-full border-2 border-white shadow-sm bg-[#F9B4B8]" title="Blush Rose"></span>
+                        </div>
+                        <p class="text-xs text-gray-500">Dusty Blue • Mint • Champagne • Blush</p>
+                    </div>
+                </div>
+
+                <!-- Gifts Card -->
+                <div class="bg-champagne/60 rounded-2xl p-6 border border-gold/30 text-center flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-full bg-plum/10 text-plum flex items-center justify-center mx-auto mb-4 text-xl">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <h3 class="font-serif font-bold uppercase tracking-widest text-plum text-lg mb-2">Gifts</h3>
+                        <p class="font-serif text-base text-gray-800 leading-relaxed">
+                            Your prayers, love, and presence as we tie the knot are all we truly need. Should you wish to bless us further, a <strong>monetary gift</strong> to help us build our new life together would be deeply appreciated.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRINCIPAL SPONSORS SECTION (Inspired by Ninong & Ninang Invitations) -->
+        <section id="entourage" class="bg-gradient-to-b from-[#FAF4EE] to-[#F5EBE1] rounded-3xl p-6 sm:p-10 shadow-lg border border-gold/50 relative overflow-hidden">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <p class="uppercase tracking-[0.2em] text-xs font-semibold text-terracotta mb-1">With Deepest Respect</p>
+                <h2 class="font-script text-4xl sm:text-5xl text-terracotta">Principal Sponsors</h2>
+                <p class="font-serif italic text-base sm:text-lg text-terracotta/90 mt-3">
+                    "As we begin our life together, we seek the blessing and wisdom of those we deeply respect. We would be honored to have you stand with us as witnesses on our wedding."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Ninang List -->
+                <div class="bg-white/85 rounded-2xl p-6 border border-gold/40 shadow-sm">
+                    <div class="text-center border-b border-gold/30 pb-3 mb-4">
+                        <h3 class="font-script text-3xl text-terracotta">Ninang</h3>
+                        <p class="text-xs uppercase tracking-widest text-gray-500">Female Principal Sponsors</p>
+                    </div>
+                    <ol class="space-y-2.5 font-serif text-lg text-gray-800 px-2">
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">1.</span> Jeremee Jade Lee</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">2.</span> Annelee Tunac</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">3.</span> Jessica Benito</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">4.</span> Hazel Gonzales</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">5.</span> Celis Claraval</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">6.</span> Ann Quila</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">7.</span> Venus San Diego</li>
+                        <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">8.</span> Bernadette Lamit</li>
+                    </ol>
+                </div>
+
+                <!-- Ninong List -->
+                <div class="bg-white/85 rounded-2xl p-6 border border-gold/40 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="text-center border-b border-gold/30 pb-3 mb-4">
+                            <h3 class="font-script text-3xl text-terracotta">Ninong</h3>
+                            <p class="text-xs uppercase tracking-widest text-gray-500">Male Principal Sponsors</p>
+                        </div>
+                        <ol class="space-y-2.5 font-serif text-lg text-gray-800 px-2">
+                            <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">1.</span> Hon. Jesus Angelito Y. Huertas, Jr.</li>
+                            <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">2.</span> Atty. Dominic Ladeza</li>
+                            <li class="flex items-center gap-3"><span class="text-xs font-sans font-semibold text-gold w-5">3.</span> Cyril Lamit</li>
+                        </ol>
+                    </div>
+                    <div class="mt-8 pt-4 border-t border-gold/20 text-center">
+                        <p class="font-script text-2xl text-terracotta">Carlo &amp; Alexandra</p>
+                        <p class="text-xs tracking-widest text-terracotta/80 uppercase">December 12, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RECEPTION MENU PREVIEW SECTION -->
+        <section id="menu" class="bg-white/90 rounded-3xl p-6 sm:p-10 shadow-lg border border-gold/40">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <span class="inline-block px-3 py-1 rounded-full bg-blush/50 text-plum text-xs font-semibold uppercase tracking-wider mb-2">
+                    Reception Feast
+                </span>
+                <h2 class="font-serif font-bold text-2xl sm:text-3xl text-plum">
+                    Here’s a sneak peek at what we’ll be serving at the reception:
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <!-- Appetizer -->
+                <div class="bg-champagne/50 rounded-2xl p-5 border border-gold/30">
+                    <h3 class="font-serif font-bold text-plum text-lg uppercase tracking-wider flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-utensils text-gold text-sm"></i> Appetizer
+                    </h3>
+                    <p class="text-gray-700 font-medium">Spring Roll</p>
+                </div>
+
+                <!-- Dessert -->
+                <div class="bg-champagne/50 rounded-2xl p-5 border border-gold/30">
+                    <h3 class="font-serif font-bold text-plum text-lg uppercase tracking-wider flex items-center gap-2 mb-2">
+                        <i class="fa-solid fa-ice-cream text-gold text-sm"></i> Dessert
+                    </h3>
+                    <p class="text-gray-700 font-medium">Fruit Salad</p>
+                </div>
+
+                <!-- Main Dishes -->
+                <div class="bg-champagne/50 rounded-2xl p-5 border border-gold/30 sm:col-span-2">
+                    <h3 class="font-serif font-bold text-plum text-lg uppercase tracking-wider flex items-center gap-2 mb-3">
+                        <i class="fa-solid fa-plate-wheat text-gold text-sm"></i> Main Dishes
+                    </h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-700 font-medium">
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Bihon Guisado</div>
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Grilled Liempo</div>
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Fried Chicken Legs</div>
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Beef Kare-Kare</div>
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Fish Fillet with Tartar Sauce</div>
+                        <div class="bg-white/80 px-3.5 py-2 rounded-xl border border-gold/20">• Chopsuey</div>
+                    </div>
+                </div>
+
+                <!-- Drinks -->
+                <div class="bg-champagne/50 rounded-2xl p-5 border border-gold/30 sm:col-span-2 flex items-center justify-between flex-wrap gap-2">
+                    <h3 class="font-serif font-bold text-plum text-lg uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-glass-water text-gold text-sm"></i> Drinks
+                    </h3>
+                    <p class="text-gray-800 font-semibold bg-white px-4 py-1.5 rounded-full border border-gold/30">
+                        Bottomless Red Iced Tea
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ONLINE RSVP FORM SECTION -->
+        <section id="rsvp" class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border-2 border-gold/50">
+            <div class="text-center max-w-lg mx-auto mb-8">
+                <h2 class="font-script text-4xl sm:text-5xl text-plum">Kindly Respond</h2>
+                <p class="text-sm sm:text-base text-gray-600 mt-2">
+                    Please fill out the form below to confirm your attendance. Your response will be sent directly to Carlo &amp; Alexandra.
+                </p>
+            </div>
+
+            <!-- Form routed directly to velosocarloangelo@gmail.com via FormSubmit.co (Works seamlessly on GitHub Pages) -->
+            <form id="rsvpForm" action="https://formsubmit.co/velosocarloangelo@gmail.com" method="POST" class="max-w-xl mx-auto space-y-6">
+                <!-- FormSubmit Configuration Hidden Fields -->
+                <input type="hidden" name="_subject" value="New Wedding RSVP - Carlo Angelo & Alexandra Dae">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+                <!-- Honeypot to prevent spam -->
+                <input type="text" name="_honey" style="display:none">
+
+                <!-- 1. Attendance (Required — Radio Button) -->
+                <div class="bg-champagne/40 p-5 rounded-2xl border border-gold/30">
+                    <label class="block font-semibold text-plum text-base mb-3">
+                        1. Will you be joining us to celebrate our wedding? <span class="text-red-500">*</span>
+                    </label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <label class="cursor-pointer relative flex items-center p-4 rounded-xl border-2 border-gray-200 bg-white hover:border-plum/50 transition has-[:checked]:border-plum has-[:checked]:bg-blush/25">
+                            <input type="radio" name="Attendance" value="Joyfully Accepts" required class="w-4 h-4 text-plum accent-plum focus:ring-plum">
+                            <span class="ml-3 font-medium text-gray-800">Joyfully Accepts</span>
+                        </label>
+                        <label class="cursor-pointer relative flex items-center p-4 rounded-xl border-2 border-gray-200 bg-white hover:border-plum/50 transition has-[:checked]:border-plum has-[:checked]:bg-blush/25">
+                            <input type="radio" name="Attendance" value="Regretfully Declines" required class="w-4 h-4 text-plum accent-plum focus:ring-plum">
+                            <span class="ml-3 font-medium text-gray-800">Regretfully Declines</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- 2. Guest Name (Required — Short Text) -->
+                <div>
+                    <label for="guestName" class="block font-semibold text-plum text-base mb-2">
+                        2. Please enter your full first and last name. <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="guestName" name="Guest_Name" required placeholder="e.g., Juan Dela Cruz"
+                           class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-plum focus:ring-2 focus:ring-plum/20 outline-none transition bg-white">
+                </div>
+
+                <!-- 3. Contact Information (Required — Short Text) -->
+                <div>
+                    <label for="contactInfo" class="block font-semibold text-plum text-base mb-2">
+                        3. What is the best mobile number or email address to reach you for any last-minute updates? <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="contactInfo" name="Contact_Information" required placeholder="e.g., 0917 123 4567 or guest@email.com"
+                           class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-plum focus:ring-2 focus:ring-plum/20 outline-none transition bg-white">
+                </div>
+
+                <!-- 4. Reception Menu Preview Reminder -->
+                <div class="bg-sage/25 border border-sage rounded-2xl p-4 text-sm text-gray-700 flex items-start gap-3">
+                    <i class="fa-solid fa-circle-info text-plum mt-0.5"></i>
+                    <div>
+                        <p class="font-semibold text-plum">Reception Menu Note</p>
+                        <p>We’ll be serving Spring Roll, Bihon Guisado, Grilled Liempo, Fried Chicken Legs, Beef Kare-Kare, Fish Fillet with Tartar Sauce, Chopsuey, Fruit Salad, and Bottomless Red Iced Tea.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Note for the Newlyweds (Optional — Paragraph Text) -->
+                <div>
+                    <label for="newlywedNote" class="block font-semibold text-plum text-base mb-2">
+                        4. Leave us a favorite memory or a piece of marriage advice! <span class="text-gray-400 font-normal text-sm">(Optional)</span>
+                    </label>
+                    <textarea id="newlywedNote" name="Note_for_the_Newlyweds" rows="4" placeholder="Write your wishes, favorite memory, or advice for Carlo & Alexandra..."
+                              class="w-full px-4 py-3.5 rounded-xl border border-gray-300 focus:border-plum focus:ring-2 focus:ring-plum/20 outline-none transition bg-white resize-y"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" id="submitBtn"
+                        class="w-full bg-plum hover:bg-plum-dark text-white font-semibold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-base">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Send RSVP Response</span>
+                </button>
+            </form>
+
+            <!-- Custom Confirmation Message Box (Replaces any browser alerts) -->
+            <div id="confirmationBox" class="hidden max-w-xl mx-auto text-center py-8 px-6 bg-champagne/60 rounded-2xl border border-gold/40">
+                <div class="w-16 h-16 bg-plum text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl shadow-md">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 class="font-serif font-bold text-2xl text-plum mb-2" id="confirmTitle">Thank You for Your RSVP!</h3>
+                <p class="text-gray-700 mb-6" id="confirmText">
+                    Your response has been sent to Carlo Angelo &amp; Alexandra Dae. We look forward to celebrating with you!
+                </p>
+                <button onclick="resetForm()" class="text-sm font-semibold text-plum underline hover:text-plum-dark">
+                    Submit another response
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 px-4 text-plum/80 text-sm">
+        <p class="font-script text-3xl text-plum mb-1">Carlo Angelo &amp; Alexandra Dae</p>
+        <p>December 12, 2026 • Ado’s Panciteria, Librado Hall, Malinao, Pasig City</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // 1. Live Countdown to December 12, 2026 11:00 AM (Philippine Time UTC+8)
+        function updateCountdown() {
+            const weddingDate = new Date('2026-12-12T11:00:00+08:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById('countdown').innerHTML = 
+                    '<div class="col-span-4 font-serif font-bold text-xl text-plum">Today is the Wedding Day!</div>';
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days;
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // 2. Download .ics Calendar Invite
+        function downloadCalendarInvite() {
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Carlo and Alexandra Wedding//EN',
+                'BEGIN:VEVENT',
+                'DTSTART:20261212T030000Z',
+                'DTEND:20261212T053000Z',
+                'SUMMARY:Carlo Angelo & Alexandra Dae Wedding',
+                'DESCRIPTION:Join us to celebrate the wedding of Carlo Angelo & Alexandra Dae! Semi-formal attire.',
+                'LOCATION:Ado\'s Panciteria, Librado Hall, Malinao, Pasig City',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Carlo-Alexandra-Wedding.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // 3. AJAX Form Submission via FormSubmit.co (Prevents page redirect & shows clean confirmation)
+        const rsvpForm = document.getElementById('rsvpForm');
+        const confirmationBox = document.getElementById('confirmationBox');
+        const submitBtn = document.getElementById('submitBtn');
+
+        rsvpForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const originalBtnContent = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> <span>Sending RSVP...</span>';
+
+            const formData = new FormData(rsvpForm);
+            const attendance = formData.get('Attendance');
+            const guestName = formData.get('Guest_Name');
+
+            try {
+                const response = await fetch('https://formsubmit.co/ajax/velosocarloangelo@gmail.com', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    rsvpForm.classList.add('hidden');
+                    confirmationBox.classList.remove('hidden');
+                    
+                    const confirmTitle = document.getElementById('confirmTitle');
+                    const confirmText = document.getElementById('confirmText');
+                    
+                    if (attendance === 'Joyfully Accepts') {
+                        confirmTitle.textContent = `We Can't Wait to See You, ${guestName}!`;
+                        confirmText.textContent = 'Your RSVP has been emailed to Carlo Angelo & Alexandra Dae. See you on December 12, 2026!';
+                    } else {
+                        confirmTitle.textContent = `Thank You for Letting Us Know, ${guestName}`;
+                        confirmText.textContent = 'We will miss you on our special day, and your response has been sent to Carlo Angelo & Alexandra Dae.';
+                    }
+                } else {
+                    // Fallback to standard HTML form submission if AJAX is blocked
+                    rsvpForm.submit();
+                }
+            } catch (error) {
+                // Fallback to standard HTML form submission
+                rsvpForm.submit();
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnContent;
+            }
+        });
+
+        function resetForm() {
+            rsvpForm.reset();
+            confirmationBox.classList.add('hidden');
+            rsvpForm.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

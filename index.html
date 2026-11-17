@@ -338,21 +338,25 @@
         “We want to share happiness with our loved ones. Come and celebrate our wedding.”
       </p>
 
-      <!-- Date Banner -->
-      <div class="relative z-10 max-w-md mx-auto my-5 py-3">
-        <p class="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-plum mb-1">December</p>
-        <div class="flex items-center justify-center gap-4 sm:gap-6">
-          <span class="border-y border-plum/40 py-1 px-3 text-xs sm:text-sm font-semibold tracking-widest uppercase text-plum">
-            Saturday
-          </span>
-          <span class="font-serif text-5xl sm:text-6xl font-bold text-plum leading-none">
+      <!-- Date Banner (Centered Symmetrical Grid so December, 12, and 2026 align) -->
+      <div class="relative z-10 max-w-lg mx-auto my-5 py-3">
+        <p class="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-plum mb-1.5 text-center">December</p>
+        <div class="grid grid-cols-[1fr_auto_1fr] items-center gap-3 sm:gap-5">
+          <div class="flex justify-end">
+            <span class="border-y border-plum/40 py-1 px-3 text-xs sm:text-sm font-semibold tracking-widest uppercase text-plum whitespace-nowrap">
+              Saturday
+            </span>
+          </div>
+          <span class="font-serif text-5xl sm:text-6xl font-bold text-plum leading-none text-center px-1">
             12
           </span>
-          <span class="border-y border-plum/40 py-1 px-3 text-xs sm:text-sm font-semibold tracking-wider text-plum">
-            11:00AM–1:30PM
-          </span>
+          <div class="flex justify-start">
+            <span class="border-y border-plum/40 py-1 px-2.5 sm:px-3 text-[11px] sm:text-sm font-semibold tracking-wider text-plum whitespace-nowrap">
+              11:00AM–1:30PM
+            </span>
+          </div>
         </div>
-        <p class="font-serif text-xl sm:text-2xl font-bold text-plum mt-1">2026</p>
+        <p class="font-serif text-xl sm:text-2xl font-bold text-plum mt-1.5 text-center tracking-wider">2026</p>
       </div>
 
       <!-- Live Countdown -->
@@ -525,7 +529,6 @@
             Ninong
           </h3>
           <ol class="space-y-2.5 font-serif text-lg sm:text-xl text-plumDark list-decimal list-inside">
-            <li>Hon. Jesus Angelito Y. Huertas, Jr.</li>
             <li>Atty. Dominic Ladeza</li>
             <li>Cyril Lamit</li>
           </ol>
